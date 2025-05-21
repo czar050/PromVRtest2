@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Missions : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Missions : MonoBehaviour
     [SerializeField] private AudioClip _completeClip;
     [SerializeField] private AudioClip _errorClip;
     [SerializeField] private UnityEvent onMissionComplete;
+    [SerializeField] private Toggle[] _toogle;
         
     private int _currentStep;
     private bool _isActive = true;
@@ -32,16 +34,13 @@ public class Missions : MonoBehaviour
         {
             step.status = StepStatus.CompletedCorrect;
             _audioSource.PlayOneShot(_completeClip);
+            _toogle[_currentStep].isOn = true;
+            _currentStep++;
         }
-        _currentStep++;
 
         if(_currentStep >= missionData.Steps.Length)
         {
             MissionsFinish();
-        }
-        else
-        {
-            StartMission();
         }
     }
 

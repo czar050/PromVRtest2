@@ -1,5 +1,5 @@
 
-public enum StepAction { CheckPoint, Garb, Put}
+public enum StepAction { CheckPoint, Grab, Put}
 public enum StepStatus { NotStarted, Skipped, CompetedError, CompletedCorrect}
 
 [System.Serializable]

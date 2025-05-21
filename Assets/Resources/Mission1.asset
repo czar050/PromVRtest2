@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: Mission1
   m_EditorClassIdentifier: 
   Steps:
-  - ID: 0
+  - ID: 1
     stepAction: 0
     status: 0
-    Target: 
+    Target: checkpointer
+    Description: 
+  - ID: 2
+    stepAction: 1
+    status: 0
+    Target: grabBox
     Description: 
