@@ -10,6 +10,7 @@ public class Missions : MonoBehaviour
     [SerializeField] private AudioClip _errorClip;
     [SerializeField] private UnityEvent onMissionComplete;
     [SerializeField] private Toggle[] _toogle;
+    [SerializeField] private GameObject _particleSystem;
         
     private int _currentStep;
     private bool _isActive = true;
@@ -48,5 +49,6 @@ public class Missions : MonoBehaviour
     {
         _isActive = false;
         onMissionComplete.Invoke();
+        Destroy(Instantiate(_particleSystem, transform.position, transform.rotation), 5);
     }
 }

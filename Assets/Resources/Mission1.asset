@@ -15,11 +15,16 @@ MonoBehaviour:
   Steps:
   - ID: 1
     stepAction: 0
-    status: 0
+    status: 3
     Target: checkpointer
     Description: 
   - ID: 2
     stepAction: 1
-    status: 0
+    status: 3
     Target: grabBox
+    Description: 
+  - ID: 3
+    stepAction: 2
+    status: 3
+    Target: putCube
     Description: 
