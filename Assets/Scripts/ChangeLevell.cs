@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ChangeLevell : MonoBehaviour
 {
     [SerializeField] private Button _startButton;
+    [SerializeField] private int _levelIndex;
 
     private void Start()
     {
@@ -13,6 +14,6 @@ public class ChangeLevell : MonoBehaviour
 
     private void NextLevel()
     {
-        SceneManager.LoadScene("TrainingScene");
+        SceneManager.LoadScene(_levelIndex);
     }
 }
